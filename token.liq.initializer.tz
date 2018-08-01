@@ -1,0 +1,1 @@
+parameter unit; storage (pair address (map address nat)); code { DUP ;        DIP { CDR } ;        CAR ;        SOURCE ;        PUSH (map address nat) {} ;        { DIP { DUP } ; SWAP } ;        PAIR ;        DIP { DROP } ;        NIL operation ;        PAIR ;        DIP { DROP ; DROP } }; 

@@ -1,0 +1,26 @@
+parameter string;
+storage (map string int);
+code { DUP ;
+       DIP { CDR } ;
+       CAR ;
+       PUSH mutez 5000000 ;
+       AMOUNT @amount ;
+       COMPARE ;
+       LT ;
+       IF { PUSH string "Not enough money, at least 5tz to vote" ; FAILWITH }
+          { DUUP @storage ;
+            DUUP @parameter ;
+            GET ;
+            IF_NONE
+              { PUSH string "Bad vote" ; FAILWITH }
+              { DUUUP @storage ;
+                PUSH int 1 ;
+                DUUUP @x ;
+                ADD ;
+                DUUUUP @parameter ;
+                DIP { SOME } ;
+                DIIIP { DROP } ;
+                UPDATE @storage ;
+                NIL operation ;
+                PAIR } } ;
+       DIP { DROP ; DROP } };

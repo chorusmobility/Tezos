@@ -1,0 +1,1 @@
+parameter string; storage (map string int); code { DUP ;        DIP { CDR } ;        CAR ;        DUP ;        PUSH (map string int) { Elt "ocaml" 0 ; Elt "pro" 0 } ;        PUSH int 0 ;        { DIP { { DIP { DUP } ; SWAP } } ; SWAP } ;        DIP { SOME } ;        UPDATE ;        DIP { DROP } ;        NIL operation ;        PAIR ;        DIP { DROP ; DROP } }; 

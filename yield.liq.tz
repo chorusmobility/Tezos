@@ -1,0 +1,100 @@
+parameter (or string (or string (or unit (or unit (or unit (or unit (or unit unit)))))));
+storage
+  (pair (contract unit)
+        (pair (contract unit) (pair timestamp (pair timestamp (pair nat (pair string string))))));
+code { DUP ;
+       DIP { CDR } ;
+       CAR ;
+       DUP @parameter ;
+       IF_LEFT
+         { DUUUP @storage ;
+           DUP ;
+           CAR ;
+           SWAP ;
+           CDR ;
+           DUP ;
+           CAR ;
+           SWAP ;
+           CDR ;
+           DUP ;
+           CAR ;
+           SWAP ;
+           CDR ;
+           DUP ;
+           CAR ;
+           SWAP ;
+           CDR ;
+           DUP ;
+           CAR ;
+           SWAP ;
+           CDR ;
+           CDR ;
+           DUUUUUUUP @location ;
+           DIIIIIIIP { DROP } ;
+           PAIR ;
+           SWAP ;
+           PAIR ;
+           SWAP ;
+           PAIR ;
+           SWAP ;
+           PAIR ;
+           SWAP ;
+           PAIR ;
+           SWAP ;
+           PAIR @storage ;
+           NIL operation ;
+           PAIR }
+         { IF_LEFT
+             { DUUUP @storage ;
+               DUP ;
+               CAR ;
+               SWAP ;
+               CDR ;
+               DUP ;
+               CAR ;
+               SWAP ;
+               CDR ;
+               DUP ;
+               CAR ;
+               SWAP ;
+               CDR ;
+               DUP ;
+               CAR ;
+               SWAP ;
+               CDR ;
+               DUP ;
+               CAR ;
+               SWAP ;
+               CDR ;
+               DUP ;
+               CAR ;
+               SWAP ;
+               DROP ;
+               DUUUUUUUP @location ;
+               DIIIIIIIP { DROP } ;
+               SWAP ;
+               PAIR ;
+               SWAP ;
+               PAIR ;
+               SWAP ;
+               PAIR ;
+               SWAP ;
+               PAIR ;
+               SWAP ;
+               PAIR ;
+               SWAP ;
+               PAIR @storage ;
+               NIL operation ;
+               PAIR }
+             { IF_LEFT
+                 { DROP ; DUUP ; NIL operation ; PAIR }
+                 { IF_LEFT
+                     { DROP ; DUUP ; NIL operation ; PAIR }
+                     { IF_LEFT
+                         { DROP ; DUUP ; NIL operation ; PAIR }
+                         { IF_LEFT
+                             { DROP ; DUUP ; NIL operation ; PAIR }
+                             { IF_LEFT
+                                 { DROP ; DUUP ; NIL operation ; PAIR }
+                                 { DROP ; DUUP ; NIL operation ; PAIR } } } } } } } ;
+       DIP { DROP ; DROP } };

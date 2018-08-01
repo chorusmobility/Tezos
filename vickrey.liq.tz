@@ -1,0 +1,67 @@
+parameter (or signature (or (pair nat key) (or unit unit)));
+storage
+  (pair address
+        (pair (contract unit)
+              (pair nat
+                    (pair timestamp
+                          (pair timestamp
+                                (pair (option address)
+                                      (pair nat
+                                            (pair nat (pair (map address bool) (pair (map address mutez) (map address signature)))))))))));
+code { DUP ;
+       DIP { CDR } ;
+       CAR ;
+       DUUP @storage ;
+       NIL operation ;
+       PAIR @do_nothing ;
+       DUUP @parameter ;
+       IF_LEFT
+         { DUUUUP ;
+           CDDDAR ;
+           NOW ;
+           COMPARE ;
+           GT ;
+           IF { PUSH string "Bidding already ended" ; FAILWITH } { UNIT } ;
+           DROP ;
+           DUUUUP ;
+           CAR ;
+           SOURCE ;
+           COMPARE ;
+           EQ ;
+           IF { PUSH string "The seller can't bid" ; FAILWITH } { UNIT } ;
+           DROP ;
+           DROP ;
+           DUP }
+         { IF_LEFT
+             { DROP ; DUP }
+             { IF_LEFT
+                 { DUUUUP ;
+                   CDDDDAR ;
+                   NOW ;
+                   COMPARE ;
+                   LT ;
+                   IF { PUSH string "Revealing isn't finished" ; FAILWITH } { UNIT } ;
+                   DROP ;
+                   DROP ;
+                   DUP }
+                 { DUUUUP ;
+                   CDDDDAR ;
+                   NOW ;
+                   COMPARE ;
+                   LT ;
+                   IF { PUSH string "Revealing isn't finished" ; FAILWITH } { UNIT } ;
+                   DROP ;
+                   DUUUUP ;
+                   CDDDDDDDDAR ;
+                   SOURCE ;
+                   GET ;
+                   IF_NONE
+                     { PUSH string "Sender hasn't revealed" ; FAILWITH }
+                     { DUP @revealed ;
+                       NOT ;
+                       IF { PUSH string "Sender hasn't revealed" ; FAILWITH } { UNIT } ;
+                       DROP ;
+                       DROP ;
+                       DUUP } ;
+                   DIP { DROP } } } } ;
+       DIP { DROP ; DROP ; DROP } };
