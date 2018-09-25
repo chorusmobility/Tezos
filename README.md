@@ -3,7 +3,7 @@
 ## Proof-of-Yield
 
 
-Solidity smart contract for the road space negotiation using Vickrey auctions. The contract is triggered in case two vehicles conduct a road-space negotiation auction that results either in a change of positions or is aborted. The contracts implements a prototype of a standard protocol for autonomous vehicle communication and processing of P2P micro payments within Vehicular Ad-Hoc Networks (VANETs).
+Liquidity smart contract for the road space negotiation using Vickrey auctions. The contract is triggered in case two vehicles conduct a road-space negotiation auction that results either in a change of positions or is aborted. The contracts implements a prototype of a standard protocol for autonomous vehicle communication and processing of P2P micro payments within Vehicular Ad-Hoc Networks (VANETs).
 
 ## Vickrey Auction
 
