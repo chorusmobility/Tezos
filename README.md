@@ -11,8 +11,6 @@ A further important core concept of the Chorus V2X system is to support the exch
 
 An example of a Vickrey auction with multiple buyers and sellers is illustrated below. We assume a scenario where buyer one is willing to pay a price of $1.80, buyer two offers a price of $3.20 and buyer three offering $3.50. The seller is not selling for less than $2.0. Again, we only conduct a single auction round and the buyers as well as the seller all submit their bid in an encrypted and signed envelope that is distributed and send to all registered participants. As soon as all participants received the bids, the encryption keys are exchanged as well and the sealed bids are decrypted. Buyer three wins the auction and pays the seller the price of buyer two that offered $3.20.
 
-![X-X Vickrey Auction Algorithm](docs/20180501_auction-aglorithms--X-to-X.png?raw=true "X-X Vickrey Auction Algorithm")
-
 In case we have multiple sellers, the sequence diagram is almost identical and the bidding process follows the same procedure. Except in the end, the highest bidder is paying the second highest price to  the seller with the highest minimum price, and so on - as long as the paid price is higher than the matched seller's minimum price.
 
 ## Token
