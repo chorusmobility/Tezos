@@ -1,4 +1,4 @@
-# Solidity Smart Contracts
+# :Liquidity Smart Contracts compiled to Michelson
 
 ## Proof-of-Yield
 
