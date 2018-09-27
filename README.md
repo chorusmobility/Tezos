@@ -15,7 +15,3 @@ In case we have multiple sellers, the sequence diagram is almost identical and t
 
 ## Token
 Custom Tezos Token Contract
-
-# License
-
-All Rights Reserved. Proof-of-Stake Inc.
