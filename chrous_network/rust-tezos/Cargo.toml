@@ -1,0 +1,7 @@
+[package]
+name = "rust-tezos"
+version = "0.1.0"
+authors = ["Sviat Chumakov <svchumakov@gmail.com>"]
+
+[dependencies]
+reqwest = "0.9.4"

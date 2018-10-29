@@ -7,6 +7,7 @@
 *.cmx
 *.cmxs
 *.cmxa
+*.swp
 
 # ocamlbuild working directory
 _build/
@@ -21,3 +22,6 @@ setup.log
 
 # Merlin configuring file for Vim and Emacs
 .merlin
+
+.idea
+target/
