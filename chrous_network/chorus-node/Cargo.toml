@@ -1,0 +1,8 @@
+[package]
+name = "chrous-node"
+version = "0.1.0"
+authors = ["Sviat Chumakov <svchumakov@gmail.com>"]
+
+[dependencies]
+rust-tezos = { path = "../rust-tezos" }
+hbbft = { path = "../../../hbbft" }
