@@ -1,3 +1,50 @@
+# Tezos Vehicular Network Project Status: 
+
+# Phase 1 (Implemented):
+
+* Choose technologies for Tezos Vehicular Ad Hoc Network implementation:
+-- Rust as the sidechain implementation language
+-- Honey Badger BFT as the sidechain consensus algorithm
+-- POA Network HBBFT as the upstream Honey Badger implementation in Rust
+-- Reqwest as the HTTP RPC library for interaction with Tezos Nodes
+
+* Set up Cargo Workspace-based project to manage internal dependencies between project. This also allows us to later publish sub-projects as separate crates once they become mature
+
+* Set up a project for Tezos-Rust RPC bindings on top of the Reqwest HTTP library
+
+* Implement a minimal test of Test-Rust RPC connectivity
+
+* Set up a project for the Vehicular Sidechain node
+
+# Phase 2 (In progress):
+
+* Implement a minimal test of the Vehicular Sidechain node connectivity on top of the POA Network HBBFT library
+
+* Implement parts of the Tezos JSON/RPC API surface in our Tezos-Rust bindings crate
+
+* Implement a minimal example of Vehicular Sidechain node <-> Test-Rust bindings connectivity
+
+# Phase 3 (To be implemented next):
+
+* Continue covering more of Tezos JSON/RPC API surface in our Tezos-Rust bindings
+
+* Cover the Tezos-Rust bindings with tests
+
+* Cover the Vehicular Sidechain node with tests
+
+* Implement more PoC vehicular interaction scenarios on top of our code base
+
+# Phase 4 (to be scheduled and implemented later):
+
+* Establish load testing and performance/timing standards and regression tracking
+
+* Iterate on algorithmic optimizations and trade-offs to meet real-world performance requirements
+
+* Establish contribution standards and help the open-source community join the project
+
+
+------------------------------------------------------------------------------------------------------------------
+
 # Liquidity Smart Contracts compiled to Michelson
 
 ## Proof-of-Yield
