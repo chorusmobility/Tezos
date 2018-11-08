@@ -1,12 +1,11 @@
 # Tezos Vehicular Network Project Status: 
-
-# Phase 1 (Implemented):
+## Phase 1 (Implemented):
 
 * Choose technologies for Tezos Vehicular Ad Hoc Network implementation:
--- Rust as the sidechain implementation language
--- Honey Badger BFT as the sidechain consensus algorithm
--- POA Network HBBFT as the upstream Honey Badger implementation in Rust
--- Reqwest as the HTTP RPC library for interaction with Tezos Nodes
+ 1. Rust as the sidechain implementation language
+ 2. Honey Badger BFT as the sidechain consensus algorithm
+ 3. POA Network HBBFT as the upstream Honey Badger implementation in Rust
+ 4. Reqwest as the HTTP RPC library for interaction with Tezos Nodes
 
 * Set up Cargo Workspace-based project to manage internal dependencies between project. This also allows us to later publish sub-projects as separate crates once they become mature
 
@@ -16,7 +15,7 @@
 
 * Set up a project for the Vehicular Sidechain node
 
-# Phase 2 (In progress):
+## Phase 2 (In progress):
 
 * Implement a minimal test of the Vehicular Sidechain node connectivity on top of the POA Network HBBFT library
 
@@ -24,7 +23,7 @@
 
 * Implement a minimal example of Vehicular Sidechain node <-> Test-Rust bindings connectivity
 
-# Phase 3 (To be implemented next):
+## Phase 3 (To be implemented next):
 
 * Continue covering more of Tezos JSON/RPC API surface in our Tezos-Rust bindings
 
@@ -34,7 +33,7 @@
 
 * Implement more PoC vehicular interaction scenarios on top of our code base
 
-# Phase 4 (to be scheduled and implemented later):
+## Phase 4 (to be scheduled and implemented later):
 
 * Establish load testing and performance/timing standards and regression tracking
 
