@@ -1,0 +1,15 @@
+[package]
+name = "tvahs-node"
+version = "0.1.0"
+authors = ["Sviat Chumakov <svchumakov@gmail.com>"]
+
+[dependencies]
+rust-tezos = { path = "../rust-tezos" }
+hbbft = { path = "../../../hbbft" }
+env_logger = "0.5.13"
+log = "0.4.6"
+docopt = "1.0.2"
+serde = "1.0.80"
+serde_derive = "1.0.80"
+rand = "0.4.2"
+rand_derive = "0.3.1"
