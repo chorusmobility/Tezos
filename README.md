@@ -59,5 +59,4 @@ An example of a Vickrey auction with multiple buyers and sellers is illustrated 
 
 In case we have multiple sellers, the sequence diagram is almost identical and the bidding process follows the same procedure. Except in the end, the highest bidder is paying the second highest price to  the seller with the highest minimum price, and so on - as long as the paid price is higher than the matched seller's minimum price.
 
-## Token
-Custom Tezos Token Contract
+
