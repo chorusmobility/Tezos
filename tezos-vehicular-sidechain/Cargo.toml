@@ -1,2 +1,2 @@
 [workspace]
-members = ["tvahs-node", "rust-tezos"]
+members = ["tvahs-node", "rust-tezos", "tezos-private"]
